@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tekno Builds</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #ffffff;
+      text-align: center;
+      overflow-x: hidden;
+      background-image: url('https://wallpapercave.com/wp/wp6845734.jpg');
+    }
+
+    /* Parallax Background */
+    .parallax {
+      background-image: url('https://wallpapercave.com/wp/wp6845734.jpg');
+      /* Replace with your background image */
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      height: 600px;
+      width: 100%;
+      position: relative;
+    }
+
+    /* Sticky Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(45deg, #43cea2, #185a9d);
+      color: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      z-index: 10;
+      transition: all 0.3s ease;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff7e5f;
+    }
+
+    /* Header Styling */
+    header {
+      padding: 50px 20px;
+      background: linear-gradient(45deg, #ff7e5f, #feb47b);
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 3em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    /* Button Styling */
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      color: #fff;
+      background: linear-gradient(45deg, #ff7e5f, #feb47b);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Section Styling with Gradient Backgrounds */
+    section {
+      padding: 50px 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-in-out;
+      border-radius: 10px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 1200px;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #about {
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+    }
+
+    #services {
+      background: linear-gradient(45deg, #43cea2, #185a9d);
+    }
+
+    #products {
+      background: linear-gradient(45deg, #ff9966, #ff5e62);
+    }
+
+    #prebuilt {
+      background: linear-gradient(45deg, #56ccf2, #2f80ed);
+    }
+
+    #contact {
+      background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    }
+
+    /* Service Boxes */
+    .service,
+    .product,
+    .prebuilt {
+      display: inline-block;
+      width: 100%;
+      max-width: 300px;
+      margin: 10px 1%;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .service h3,
+    .product h3,
+    .prebuilt h3 {
+      margin-bottom: 10px;
+    }
+
+    /* Image Styling */
+    .product img,
+    .prebuilt img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    /* Contact Social Icons */
+    .social-icons img {
+      width: 40px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+
+      .service,
+      .product,
+      .prebuilt {
+        width: 90%;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+      }
+    }
+
+    /* Keyframes for Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+  <style>
+    /* Reset and Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #f3f3f3;
+      overflow-x: hidden;
+      background-image: url('https://wallpapercave.com/wp/wp6845734.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    /* Parallax Background */
+    .parallax {
+      height: 250px;
+      width: 100%;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://wallpapercave.com/wp/wp6845734.jpg');
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+    }
+
+    /* Sticky Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      background: #222;
+      color: #fff;
+      z-index: 10;
+    }
+
+    nav .logo {
+      font-size: 1.8em;
+      color: #ff7e5f;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff7e5f;
+    }
+
+    /* Header Styling */
+    header {
+      padding: 70px 20px;
+      background: linear-gradient(45deg, #ff7e5f, #feb47b);
+      color: #fff;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background: #ff7e5f;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      background: #feb47b;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 50px 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-in-out;
+      border-radius: 10px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 1200px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      color: #fff;
+    }
+
+    /* Gradient Backgrounds */
+    #about {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+
+    #services {
+      background: linear-gradient(45deg, #43cea2, #185a9d);
+    }
+
+    #products {
+      background: linear-gradient(45deg, #ff9966, #ff5e62);
+    }
+
+    #prebuilt {
+      background: linear-gradient(45deg, #56ccf2, #2f80ed);
+    }
+
+    #contact {
+      background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    }
+
+    /* Contact Form Styling */
+    .contact-form input, .contact-form textarea {
+      margin: 10px 0;
+      padding: 15px;
+      width: 80%;
+      max-width: 500px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      color: #333;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+      font-size: 1em;
+      color: #fff;
+      background-color: #43cea2;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav a {
+        font-size: 0.9em;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+      }
+
+      .contact-form input, .contact-form textarea {
+        width: 100%;
+      }
+    }
+  </style>
+  <style>
+    /* Reset and Global Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #f3f3f3;
+      overflow-x: hidden;
+    }
+
+    /* Guide Section Styling */
+    #pc-guide {
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    #pc-guide h2 {
+      font-size: 2.8em;
+      font-weight: bold;
+      margin-bottom: 20px;
+      animation: slideInDown 1s ease-in-out;
+    }
+    
+    #pc-guide p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    /* Animated Hover Cards for Steps */
+    .guide-step {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      width: 100%;
+      max-width: 250px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+      cursor: pointer;
+      animation: zoomIn 1s ease forwards;
+    }
+
+    .guide-step:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .guide-step h3 {
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    .guide-step img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    /* Keyframe Animations */
+    @keyframes slideInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .guide-step {
+        width: 90%;
+        margin: 15px auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Parallax Background -->
+  <div class="parallax"></div>
+
+  <!-- Navigation Bar with Logo -->
+  <nav>
+    <div class="logo">Tekno Builds</div>
+    <div>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#products">Parts</a>
+      <a href="#prebuilt">Prebuilt PCs</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+  
+  <!-- Header Section -->
+  <header>
+    <h1>Welcome to Tekno Builds</h1>
+    <p>Discover high-performance custom PC builds crafted for gamers, creatives, and professionals.</p>
+    <a href="#services" class="button">Explore Services</a>
+  </header>
+
+
+  <section id="about"
+    style="background: linear-gradient(135deg, #f093fb, #f5576c); padding: 60px 20px; color: white; text-align: center; position: relative;">
+    <h2 style="font-size: 2.5em; font-weight: bold; margin-bottom: 20px; animation: fadeIn 1s ease-in-out;">About Us
+    </h2>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <p style="font-size: 1.2em; line-height: 1.6; margin-bottom: 40px; animation: slideIn 1.2s ease-in-out;">
+        At <strong>Custom PC Builder</strong>, we believe that your computer is more than just a machine—it's a
+        reflection of your passion, creativity, and power.
+        Whether you're a gamer chasing high performance, a content creator in need of reliability, or a professional
+        demanding efficiency, we bring your dream PC to life.
+      </p>
+      <p style="font-size: 1.1em; line-height: 1.6; animation: slideIn 1.4s ease-in-out;">
+        Our team of experts is committed to crafting PCs that not only look stunning but perform with excellence. With
+        hand-picked components, personalized configurations,
+        and an eye for detail, we create systems that are unique, powerful, and built to last. Join us on this journey
+        to transform the way you experience technology.
+      </p>
+    </div>
+    <img src="https://www.mycomputerrepair.com.my/wp-content/uploads/2021/04/computer-repair-technicians.jpg"
+      style="width: 100%; max-width: 600px; border-radius: 15px; margin-top: 30px; animation: zoomIn 1.6s ease-in-out;">
+  </section>
+
+  <!-- Keyframe Animations -->
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .service-button {
+  display: block;
+  text-decoration: none;
+  color: inherit; /* Use inherited text color instead of default link color */
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffffff00; /* Button background color */
+  color: white; /* Button text color */
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for button */
+.service-button:hover {
+  background-color: #52b2d8;
+}
+  </style>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="service">
+    <a href="our-services.html#gaming-pcs" class="service-button">
+      <h3>Custom Gaming PCs</h3>
+      <p>High-performance gaming systems built to deliver the best experience with top-tier graphics and cooling.</p>
+    </a>
+  </div>
+  <div class="service">
+    <a href="our-services.html#workstations" class="service-button">
+      <h3>Workstations</h3>
+      <p>Designed for multitasking, software development, graphic design, and smooth, reliable computing.</p>
+    </a>
+  </div>
+  <div class="service">
+    <a href="our-services.html#parts" class="service-button">
+      <h3>Individual Parts</h3>
+      <p>A wide range of parts from processors to storage, for DIY builders and upgrades.</p>
+    </a>
+  </div>
+</section>
+
+  
+  <section id="products">
+    <h2>Individual Parts for Sale</h2>
+    <div class="product">
+      <a href="indi.html#product" class="service-button">
+      <h3>Graphics Card</h3>
+      <img src="https://asset.msi.com/global/picture/image/feature/vga/NVIDIA/GTX1080/carousel_TF6.jpg"
+        alt="Graphics Card"></a>
+    </div>
+    <div class="product">
+      <a href="indi.html#product" class="service-button">
+      <h3>Processor</h3>
+      <img src="https://th.bing.com/th/id/OIP.RJtHm228yMIHqwNAb88aawHaEK?rs=1&pid=ImgDetMain" alt="Processor">
+    </div></a>
+    <div class="product">
+      <a href="indi.html#product" class="service-button">
+      <h3>SSD Storage</h3>
+      <img src="https://th.bing.com/th/id/OIP.Wr11a8ilwYpinftMmoC1sQHaE8?rs=1&pid=ImgDetMain" alt="SSD">
+    </div></a>
+  </section>
+  <style>
+    
+  </style>
+  <section id="prebuilt">
+    <h2>Prebuilt PC Options</h2>
+    <div class="prebuilt">
+      <a href="preb.html" class="service-button">
+      <h3>Gaming Beast</h3>
+      <img src="https://th.bing.com/th/id/OIP.SLBpmgn3qetXGyORRwq5mwHaFj?rs=1&pid=ImgDetMain" alt="Gaming Beast PC">
+    </a>
+    </div>
+    <div class="prebuilt">
+    <a href="preb.html" class="service-button">
+    <div class="preb.html">
+      <h3>Workstation Pro</h3>
+      <img src="https://cloudfront.slrlounge.com/wp-content/uploads/2019/07/puget-systems.jpg" alt="Workstation Pro">
+    </div></a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have any questions or need assistance? Get in touch with us!</p>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <img src="https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/twitter_logo_blue.png.twimg.768.png"
+          alt="Twitter">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      </a>
+      <a href="https://linkedin.com" target="_blank">
+        <img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG7.png" alt="LinkedIn">
+      </a>
+    </div>
+    <p>For inquiries, email us at: <a href="mailto:contact@custompcbuilder.com">contact@custompcbuilder.com</a></p>
+  </section>
+
+  <script>
+    // Reveal sections on scroll
+    const sections = document.querySelectorAll("section");
+
+    const revealOnScroll = () => {
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight - 100) {
+          section.style.opacity = "1";
+          section.style.transform = "translateY(0)";
+        }
+      });
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+
+</body>
+
+</html>

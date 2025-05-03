@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prebuilt PC Options | Tekno Builds</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Reset and Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header and Navigation Styling */
+    header {
+      background: #4CAF50;
+      color: #fff;
+      padding: 15px 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      display: inline-block;
+    }
+
+    nav {
+      float: right;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #cce7d0;
+    }
+
+    /* Main Section Styling */
+    #prebuilt {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    #prebuilt h2 {
+      grid-column: span 2;
+      text-align: center;
+      font-size: 2em;
+      color: #4CAF50;
+      margin-bottom: 20px;
+    }
+
+    /* Prebuilt PC Card */
+    .prebuilt {
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .prebuilt:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .prebuilt h3 {
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .prebuilt img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: transform 0.3s;
+    }
+
+    .prebuilt img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Button Styling */
+    .prebuilt button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .prebuilt button:hover {
+      background-color: #45a049;
+    }
+
+    /* Footer Styling */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: #f4f4f9;
+      padding: 15px 0;
+      margin-top: 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tekno Builds</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="our-services.html">Our Services</a>
+      <a href="indi.html">Individual Parts</a>
+    </nav>
+  </header>
+
+  <section id="prebuilt">
+    <h2>Prebuilt PC Options</h2>
+
+    <!-- Adding 20 PC options with distinct names and purposes -->
+    <div class="prebuilt">
+      <h3>Gaming Beast</h3>
+      <img src="https://example.com/gaming-beast.jpg" alt="Gaming Beast PC">
+      <p>Unleash ultimate power for high-end gaming.</p>
+      <button>Learn More</button>
+    </div>
+
+    <div class="prebuilt">
+      <h3>Workstation Pro</h3>
+      <img src="https://example.com/workstation-pro.jpg" alt="Workstation Pro">
+      <p>Optimal performance for professional workloads.</p>
+      <button>Learn More</button>
+    </div>
+
+    <div class="prebuilt">
+      <h3>Ultra Gamer</h3>
+      <img src="https://example.com/ultra-gamer.jpg" alt="Ultra Gamer PC">
+      <p>Perfect for AAA titles with max settings.</p>
+      <button>Learn More</button>
+    </div>
+
+    <div class="prebuilt">
+      <h3>Creator Pro</h3>
+      <img src="https://example.com/creator-pro.jpg" alt="Creator Pro PC">
+      <p>Ideal for video editing and graphic design.</p>
+      <button>Learn More</button>
+    </div>
+
+    <div class="prebuilt">
+      <h3>AI Powerhouse</h3>
+      <img src="https://example.com/ai-powerhouse.jpg" alt="AI Powerhouse PC">
+      <p>Built for AI and machine learning applications.</p>
+      <button>Learn More</button>
+    </div>
+
+    <div class="prebuilt">
+      <h3>3D Rendering Station</h3>
+      <img src="https://example.com/3d-rendering.jpg" alt="3D Rendering Station">
+      <p>Engineered for intense 3D rendering tasks.</p>
+      <button>Learn More</button>
+    </div>
+
+    <!-- Continue with additional options -->
+    <div class="prebuilt"><h3>Budget Gamer</h3><img src="https://example.com/budget-gamer.jpg" alt="Budget Gamer PC"><p>Affordable PC for entry-level gaming.</p><button>Learn More</button></div>
+    <div class="prebuilt"><h3>Data Science Rig</h3><img src="https://example.com/data-science-rig.jpg" alt="Data Science Rig"><p>Configured for data science and analytics.</p><button>Learn More</button></div>
+    <div class="prebuilt"><h3>Silent Workstation</h3><img src="https://example.com/silent-workstation.jpg" alt="Silent Workstation"><p>Silent yet powerful, ideal for quiet environments.</p><button>Learn More</button></div>
+    <div class="prebuilt"><h3>Streaming Master</h3><img src="https://example.com/streaming-master.jpg" alt="Streaming Master PC"><p>Optimal setup for high-quality streaming.</p><button>Learn More</button></div>
+    <div class="prebuilt"><h3>VR Ready</h3><img src="https://example.com/vr-ready.jpg" alt="VR Ready PC"><p>High-performance VR-compatible build.</p><button>Learn More</button></div>
+    <div class="prebuilt"><h3>Office Essential</h3><img src="https://example.com/office-essential.jpg" alt="Office Essential PC"><p>Reliable and affordable office workstation.</p><button>Learn More</button></div>
+    <div class="prebuilt"><h3>Portable Mini PC</h3><img src="https://example.com/portable-mini.jpg" alt="Portable Mini PC"><p>Compact and powerful for space-saving.</p><button>Learn More</button></div>
+    <div class="prebuilt"><h3>Ultimate Developer</h3><img src="https://example.com/ultimate-developer.jpg" alt="Ultimate Developer PC"><p>Geared for developers and software engineering.</p><button>Learn More</button></div>
+    <div class="prebuilt"><h3>Crypto Miner</h3><img src="https://example.com/crypto-miner.jpg" alt="Crypto Miner PC"><p>Optimized for cryptocurrency mining.</p><button>Learn More</button></div>
+    <div class="prebuilt"><h3>Game Design Rig</h3><img src="https://example.com/game-design-rig.jpg" alt="Game Design Rig"><p>Perfect for game developers and designers.</p><button>Learn More</button></div>
+    <div class="prebuilt"><h3>Photography Station</h3><img src="https://example.com/photography-station.jpg" alt="Photography Station"><p>Designed for photographers and photo editing.</p><button>Learn More</button></div>
+    <div class="prebuilt"><h3>CAD Engineer</h3><img src="https://example.com/cad-engineer.jpg" alt="CAD Engineer PC"><p>Ideal for CAD software and engineering tasks.</p><button>Learn More</button></div>
+    <div class="prebuilt"><h3>High-End Simulation</h3><img src="https://example.com/simulation-pc.jpg" alt="High-End Simulation PC"><p>For complex simulations and high processing.</p><button>Learn More</button></div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Tekno Builds</p>
+  </footer>
+</body>
+</html>
