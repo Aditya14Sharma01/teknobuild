@@ -12,6 +12,7 @@
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
   </head>
   <body>
     <div
@@ -41,8 +42,6 @@
             <div class="flex flex-wrap md:flex-nowrap items-center gap-4 md:gap-9 w-full md:w-auto justify-end">
               <a class="text-[#0f131a] text-sm md:text-base font-medium leading-normal" href="index.html">Home</a>
               <a class="text-[#0f131a] text-sm md:text-base font-medium leading-normal" href="catalog.html">Catalog</a>
-              <a class="text-[#0f131a] text-sm md:text-base font-medium leading-normal" href="cart.html">Cart</a>
-              <a class="text-[#0f131a] text-sm md:text-base font-medium leading-normal" href="checkout.html">Checkout</a>
               <a class="text-[#0f131a] text-sm md:text-base font-medium leading-normal" href="about.html">About</a>
             </div>
             <div class="flex gap-2 mt-2 md:mt-0">
@@ -66,6 +65,7 @@
               </button>
               <button
                 class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#e8ecf2] text-[#0f131a] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+                id="google-signin-btn"
               >
                 <div class="text-[#0f131a]" data-icon="ShoppingCart" data-size="20px" data-weight="regular">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
@@ -87,96 +87,33 @@
               <span class="text-[#536b93] text-base font-medium leading-normal">/</span>
               <span class="text-[#0f131a] text-base font-medium leading-normal">Advanced Motor Controller</span>
             </div>
-            <h2 class="text-[#0f131a] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Advanced Motor Controller</h2>
-            <p class="text-[#0f131a] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              The Advanced Motor Controller is a high-performance device designed for precise control of robotic motors. It features advanced algorithms for smooth and accurate
-              movements, making it ideal for complex robotics projects. Compatible with a wide range of motors and power supplies, it offers flexibility and reliability for
-              demanding applications.
-            </p>
-            <div class="flex w-full grow bg-[#f8fafb] @container p-4">
-              <div class="w-full gap-1 overflow-hidden bg-[#f8fafb] @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
-                <div
-                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDo5AFZQ7mkwnaIh5vzFoL9TDYWFkbL7eFRDPPYEafaa5lbjDFj_tDwP2yZkYTNblSJJKBUcf9ZO03uQqlkkbDnMrSq91lb-DzttyKSF9tKOy8pF8act4eQVTY6A8I3i7TlT6-mBLjXYaPOiLdObHeg0Kblc0316UwSiEA7FhMxelpP8CSJgJspjKSTh8ZBuvgnHfdd_EqeVTTe7V04VzWt6IfAkeU9buJB2DakSyy3R7Q1iaF0grK22B8N5DCTPIwmNQ35G1fHdwM");'
-                ></div>
-              </div>
-            </div>
-            <h3 class="text-[#0f131a] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Specifications</h3>
-            <div class="p-4 grid grid-cols-[20%_1fr] gap-x-6">
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#d1d9e5] py-5">
-                <p class="text-[#536b93] text-sm font-normal leading-normal">Input Voltage</p>
-                <p class="text-[#0f131a] text-sm font-normal leading-normal">12V - 24V</p>
-              </div>
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#d1d9e5] py-5">
-                <p class="text-[#536b93] text-sm font-normal leading-normal">Output Current</p>
-                <p class="text-[#0f131a] text-sm font-normal leading-normal">Up to 10A per channel</p>
-              </div>
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#d1d9e5] py-5">
-                <p class="text-[#536b93] text-sm font-normal leading-normal">Communication Interface</p>
-                <p class="text-[#0f131a] text-sm font-normal leading-normal">UART, I2C</p>
-              </div>
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#d1d9e5] py-5">
-                <p class="text-[#536b93] text-sm font-normal leading-normal">Dimensions</p>
-                <p class="text-[#0f131a] text-sm font-normal leading-normal">50mm x 40mm x 15mm</p>
-              </div>
-            </div>
-            <h3 class="text-[#0f131a] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Features</h3>
-            <div class="px-4">
-              <label class="flex gap-x-3 py-3 flex-row">
-                <input
-                  type="checkbox"
-                  class="h-5 w-5 rounded border-[#d1d9e5] border-2 bg-transparent text-[#1a468e] checked:bg-[#1a468e] checked:border-[#1a468e] checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-[#d1d9e5] focus:outline-none"
-                />
-                <p class="text-[#0f131a] text-base font-normal leading-normal">Precise motor control with advanced algorithms</p>
-              </label>
-              <label class="flex gap-x-3 py-3 flex-row">
-                <input
-                  type="checkbox"
-                  class="h-5 w-5 rounded border-[#d1d9e5] border-2 bg-transparent text-[#1a468e] checked:bg-[#1a468e] checked:border-[#1a468e] checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-[#d1d9e5] focus:outline-none"
-                />
-                <p class="text-[#0f131a] text-base font-normal leading-normal">Wide compatibility with various motors and power supplies</p>
-              </label>
-              <label class="flex gap-x-3 py-3 flex-row">
-                <input
-                  type="checkbox"
-                  class="h-5 w-5 rounded border-[#d1d9e5] border-2 bg-transparent text-[#1a468e] checked:bg-[#1a468e] checked:border-[#1a468e] checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-[#d1d9e5] focus:outline-none"
-                />
-                <p class="text-[#0f131a] text-base font-normal leading-normal">Compact and durable design for easy integration</p>
-              </label>
-            </div>
-            <h3 class="text-[#0f131a] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Compatibility</h3>
-            <p class="text-[#0f131a] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              This motor controller is compatible with most DC motors and stepper motors commonly used in robotics. It supports a range of input voltages from 12V to 24V and can
-              handle output currents up to 10A per channel. The controller communicates via UART and I2C interfaces, allowing seamless integration with various microcontrollers and
-              robotics platforms.
-            </p>
-            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1">
-                <div class="flex w-full flex-1 items-stretch rounded-lg">
-                  <input
-                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0f131a] focus:outline-0 focus:ring-0 border border-[#d1d9e5] bg-[#f8fafb] focus:border-[#d1d9e5] h-14 placeholder:text-[#536b93] p-[15px] rounded-r-none border-r-0 pr-2 text-base font-normal leading-normal"
-                    value=""
-                  />
-                  <div
-                    class="text-[#536b93] flex border border-[#d1d9e5] bg-[#f8fafb] items-center justify-center pr-[15px] rounded-r-lg border-l-0"
-                    data-icon="CaretDown"
-                    data-size="24px"
-                    data-weight="regular"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-                    </svg>
-                  </div>
-                </div>
-              </label>
-            </div>
-            <div class="flex px-4 py-3 justify-start">
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1a468e] text-[#f8fafb] text-sm font-bold leading-normal tracking-[0.015em]"
-              >
-                <span class="truncate">Add to Cart</span>
-              </button>
-            </div>
+            <div id="product-details"></div>
+            <script>
+              fetch('products.json')
+                .then(response => response.json())
+                .then(products => {
+                  if (!products.length) return;
+                  const product = products[0]; // Show the first product for now
+                  document.getElementById('product-details').innerHTML = `
+                    <h2 class="text-[#0f131a] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">${product.name}</h2>
+                    <p class="text-[#0f131a] text-base font-normal leading-normal pb-3 pt-1 px-4">Price: <span class="font-bold">${product.price}</span></p>
+                    <div class="flex w-full grow bg-[#f8fafb] @container p-4">
+                      <div class="w-full gap-1 overflow-hidden bg-[#f8fafb] @[480px]:gap-2 aspect-[3/2] rounded-lg flex">
+                        <div class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1" style="background-image: url('${product.image}');"></div>
+                      </div>
+                    </div>
+                    <h3 class="text-[#0f131a] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Features</h3>
+                    <ul class="px-4">
+                      ${product.features.map(f => `<li class="text-[#0f131a] text-base font-normal leading-normal py-1">${f}</li>`).join('')}
+                    </ul>
+                    <div class="flex px-4 py-3 justify-start">
+                      <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1a468e] text-[#f8fafb] text-sm font-bold leading-normal tracking-[0.015em]">
+                        <span class="truncate">Add to Cart</span>
+                      </button>
+                    </div>
+                  `;
+                });
+            </script>
             <h2 class="text-[#0f131a] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Related Products</h2>
             <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
               <div class="flex items-stretch p-4 gap-3">
@@ -216,5 +153,49 @@
         </div>
       </div>
     </div>
+    <footer class="bg-[#f8fafb] text-[#536b93] py-8 mt-8">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="flex flex-col items-center space-y-4">
+          <div class="flex justify-between w-full max-w-md mb-2">
+            <a href="#" class="hover:underline">Contact Us</a>
+            <a href="#" class="hover:underline">Privacy Policy</a>
+            <a href="#" class="hover:underline">Terms of Service</a>
+          </div>
+          <div class="flex space-x-6 mb-2">
+            <a href="#" aria-label="Twitter"><svg class="inline" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4.36a9.09 9.09 0 01-2.88 1.1A4.52 4.52 0 0016.11 0c-2.5 0-4.52 2.02-4.52 4.52 0 .35.04.7.11 1.03C7.69 5.4 4.07 3.7 1.64 1.15c-.38.65-.6 1.4-.6 2.2 0 1.52.77 2.86 1.94 3.65A4.48 4.48 0 01.96 6v.06c0 2.13 1.52 3.91 3.54 4.31-.37.1-.76.16-1.16.16-.28 0-.55-.03-.81-.08.55 1.7 2.16 2.94 4.07 2.97A9.05 9.05 0 010 21.54a12.8 12.8 0 006.92 2.03c8.3 0 12.85-6.88 12.85-12.85 0-.2 0-.41-.02-.61A9.22 9.22 0 0023 3z"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg class="inline" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg class="inline" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
+          </div>
+          <div class="text-center text-sm">@2024 Tekno Robotics. All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+    <script>
+function handleCredentialResponse(response) {
+  const data = parseJwt(response.credential);
+  alert("Signed in as: " + data.email);
+  // You can store user info in localStorage or update your UI here
+}
+function parseJwt (token) {
+  var base64Url = token.split('.')[1];
+  var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+  var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+  }).join(''));
+  return JSON.parse(jsonPayload);
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var btn = document.getElementById('google-signin-btn');
+  if (btn) {
+    btn.addEventListener('click', function() {
+      google.accounts.id.initialize({
+        client_id: '927370171156-m0cmnjv7kfhks5iel4b56s30tnrsv04m.apps.googleusercontent.com',
+        callback: handleCredentialResponse
+      });
+      google.accounts.id.prompt();
+    });
+  }
+});
+</script>
   </body>
 </html>

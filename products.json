@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Arduino UNO Genuine R3",
+    "price": "₹350",
+    "images": [],
+    "features": [
+      "Precise motor control with advanced algorithms",
+      "Wide compatibility with various motors and power supplies",
+      "Compact and durable design for easy integration"
+    ]
+  },
+  {
+    "name": "High-Torque DC Motor",
+    "price": "₹1,200",
+    "images": ["images/dc-motor.jpg"],
+    "features": [
+      "High torque for demanding applications",
+      "Durable build for long-term use"
+    ]
+  }
+] 
